@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --dark-bg: 220 20% 10%;
+    --dark-card: 220 18% 14%;
+    --dark-border: 220 15% 22%;
+    --accent: 172 66% 50%;
+    --accent-foreground: 220 20% 10%;
+    --foreground: 220 15% 85%;
+    --muted: 220 12% 55%;
+  }
+
+  body {
+    background-color: hsl(var(--dark-bg));
+    color: hsl(var(--foreground));
+    font-family: "Inter", sans-serif;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-5xl mx-auto px-6 py-16;
+  }
+
+  .section-title {
+    @apply text-2xl font-semibold mb-8 text-white;
+  }
+
+  .card-base {
+    @apply rounded-xl p-5 transition-all duration-300;
+    background: hsl(var(--dark-card));
+    border: 1px solid hsl(var(--dark-border));
+  }
+  .card-base:hover {
+    border-color: hsl(var(--accent));
+    box-shadow: 0 0 20px hsl(var(--accent) / 0.08);
+  }
+
+  .accent-text {
+    color: hsl(var(--accent));
+  }
+
+  .accent-btn {
+    @apply px-5 py-2.5 rounded-lg font-medium transition-all duration-200;
+    background: hsl(var(--accent));
+    color: hsl(var(--accent-foreground));
+  }
+  .accent-btn:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+  }
+
+  .scroll-btn {
+    @apply p-2 rounded-lg transition-colors;
+    border: 1px solid hsl(var(--dark-border));
+    color: hsl(var(--muted));
+  }
+  .scroll-btn:hover {
+    color: white;
+    border-color: hsl(var(--accent));
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-lg focus:outline-none transition-colors;
+    background: hsl(var(--dark-card));
+    border: 1px solid hsl(var(--dark-border));
+    color: white;
+  }
+  .input-field::placeholder {
+    color: hsl(var(--muted));
+  }
+  .input-field:focus {
+    border-color: hsl(var(--accent));
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
