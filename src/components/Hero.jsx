@@ -12,7 +12,8 @@ export default function Hero() {
           Siswa kelas XI jurusan{" "}
           <span className="text-white font-medium">PPLG</span> di SMK Wikrama Bogor.
         </p>
-        <p className="text-muted leading-relaxed mb-8 max-w-xl">
+        <p className="text-muted leading-relaxed mb-8 max-w-xl
+        ">
           Baru mengenal dunia pemrograman sejak masuk SMK. Sudah mencoba berbagai bahasa dan
           framework — dari HTML, CSS, JavaScript, PHP, Python, hingga Flutter dan React.
           Saat ini tertarik mendalami <span className="accent-text font-medium">Machine Learning</span>,

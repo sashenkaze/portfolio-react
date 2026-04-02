@@ -1,4 +1,5 @@
 import { SiHtml5, SiJavascript, SiPhp, SiPython, SiDart, SiFlutter, SiLaravel, SiReact, SiFlask, SiCss } from "react-icons/si"
+import { FaMagnifyingGlassChart } from "react-icons/fa6";
 
 const skills = [
   { name: "HTML", icon: <SiHtml5 /> },
@@ -31,7 +32,10 @@ export default function Skills() {
       </div>
 
       <div className="mt-10 card-base">
-        <h3 className="text-white font-semibold mb-2">🔍 Minat Saat Ini</h3>
+        <div className="flex items-center gap-2 mb-2">
+          <FaMagnifyingGlassChart />
+          <h3 className="text-white font-semibold">Minat Saat Ini</h3>
+        </div>
         <p className="text-muted text-sm leading-relaxed">
           Tertarik dengan <span className="accent-text font-medium">Machine Learning</span> —
           masih sangat di tahap awal, tapi ingin terus belajar lebih dalam.

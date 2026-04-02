@@ -8,4 +8,5 @@ export default defineConfig({
     tailwind(),
     react()
   ],
+  base: "https://sashenkaze.github.io/portfolio-react/",
 })
