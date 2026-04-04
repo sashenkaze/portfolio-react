@@ -1,4 +1,4 @@
-import { SiHtml5, SiJavascript, SiPhp, SiPython, SiDart, SiFlutter, SiLaravel, SiReact, SiFlask, SiCss } from "react-icons/si"
+import { SiHtml5, SiJavascript, SiPhp, SiPython, SiDart, SiFlutter, SiLaravel, SiReact, SiFlask, SiCss, SiMysql, SiTailwindcss, SiBootstrap, SiDjango, SiFigma, SiGit, SiGithub, SiNodedotjs, SiMongodb, SiDiscorddotjs, SiChatbot, SiPostman, SiNotion, SiAndroidstudio, SiLaragon, SiXampp, SiBrave, SiVscodium, SiWarp, SiCloudflare, SiGnubash, SiTensorflow, SiPandas, SiPostgresql } from "react-icons/si"
 import { FaMagnifyingGlassChart } from "react-icons/fa6";
 
 const skills = [
@@ -12,15 +12,27 @@ const skills = [
   { name: "Laravel", icon: <SiLaravel /> },
   { name: "React", icon: <SiReact /> },
   { name: "Flask", icon: <SiFlask /> },
+  { name: "Node.js", icon: <SiNodedotjs /> },
+  { name: "Tailwindcss", icon: <SiTailwindcss /> },
+  { name: "Bootstrap", icon: <SiBootstrap /> },
+  { name: "Figma", icon: <SiFigma /> },
+  { name: "Git", icon: <SiGit /> },
+  { name: "Github", icon: <SiGithub /> },
+  { name: "MySQL", icon: <SiMysql /> },
+  { name: "PostgreSQL", icon: <SiPostgresql /> },
+  { name: "MongoDB", icon: <SiMongodb /> },
+  { name: "Postman", icon: <SiPostman /> },
+  { name: "Notion", icon: <SiNotion /> },
+  { name: "Laragon", icon: <SiLaragon /> },
+  { name: "XAMPP", icon: <SiXampp /> },
+  { name: "TensorFlow", icon: <SiTensorflow /> },
+  { name: "Pandas", icon: <SiPandas /> },
 ]
 
 export default function Skills() {
   return (
     <section id="keahlian" className="section-container">
-      <h2 className="section-title">Bahasa & Framework</h2>
-      <p className="text-muted mb-8 max-w-lg">
-        Bahasa dan framework yang sudah pernah saya pelajari. Masih terus belajar dan eksplorasi.
-      </p>
+      <h2 className="section-title">Skills & Technologies</h2>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
         {skills.map((s) => (
@@ -34,11 +46,10 @@ export default function Skills() {
       <div className="mt-10 card-base">
         <div className="flex items-center gap-2 mb-2">
           <FaMagnifyingGlassChart />
-          <h3 className="text-white font-semibold">Minat Saat Ini</h3>
+          <h3 className="text-white font-semibold">Currently Exploring</h3>
         </div>
         <p className="text-muted text-sm leading-relaxed">
-          Tertarik dengan <span className="accent-text font-medium">Machine Learning</span> —
-          masih sangat di tahap awal, tapi ingin terus belajar lebih dalam.
+          Focused on learning <span className="accent-text font-medium">Flutter</span> for mobile development while exploring <span className="accent-text font-medium">Machine Learning</span>—currently in the early phase.
         </p>
       </div>
     </section>

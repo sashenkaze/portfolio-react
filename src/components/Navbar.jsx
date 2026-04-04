@@ -2,11 +2,11 @@ import { useState } from "react"
 import { HiMenu, HiX } from "react-icons/hi"
 
 const navLinks = [
-  { label: "Tentang", href: "#tentang" },
-  { label: "Proyek", href: "#proyek" },
-  { label: "Sertifikat", href: "#sertifikat" },
-  { label: "Keahlian", href: "#keahlian" },
-  { label: "Kontak", href: "#kontak" },
+  { label: "About", href: "#tentang" },
+  { label: "Projects", href: "#proyek" },
+  { label: "Certificates", href: "#sertifikat" },
+  { label: "Skills", href: "#keahlian" },
+  { label: "Contact", href: "#kontak" },
 ]
 
 export default function Navbar() {
@@ -16,7 +16,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[hsl(220,20%,10%,0.9)] backdrop-blur-md border-b border-[hsl(var(--dark-border))]">
       <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
         <a href="#" className="text-lg font-semibold text-white">
-          Sashenka<span className="accent-text">.</span>
+          Shenka<span className="accent-text">.</span>
         </a>
 
         <ul className="hidden md:flex gap-6">

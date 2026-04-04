@@ -1,26 +1,65 @@
+import { useState, useEffect } from "react"
 import { HiArrowDown } from "react-icons/hi"
 
+const names = ["Sashenka Osaze", "Shenka", "Сашенька", "Aze"]
+
 export default function Hero() {
+  const [text, setText] = useState("")
+  const [index, setIndex] = useState(0)
+  const [isDeleting, setIsDeleting] = useState(false)
+  const [speed, setSpeed] = useState(100)
+
+  useEffect(() => {
+    const current = names[index]
+    
+    const handleTyping = () => {
+      if (isDeleting) {
+        setText(current.substring(0, text.length - 1))
+        setSpeed(100)
+      } else {
+        setText(current.substring(0, text.length + 1))
+        setSpeed(100)
+      }
+
+      // selesai ngetik
+      if (!isDeleting && text === current) {
+        setTimeout(() => setIsDeleting(true), 1500)
+      }
+
+      // selesai hapus
+      if (isDeleting && text === "") {
+        setIsDeleting(false)
+        setIndex((prev) => (prev + 1) % names.length)
+      }
+    }
+
+    const timer = setTimeout(handleTyping, speed)
+    return () => clearTimeout(timer)
+  }, [text, isDeleting, index])
+
   return (
     <section id="tentang" className="min-h-screen flex items-center">
       <div className="section-container">
-        <p className="text-sm accent-text font-mono mb-3">Halo, nama saya</p>
+        <p className="text-sm accent-text font-mono mb-3">Hi there, Name's</p>
+
         <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-4">
-          Sashenka Osaze
+          {text}
+          <span className="animate-pulse accent-text">|</span>
         </h1>
+
         <p className="text-lg text-muted mb-6">
-          Siswa kelas XI jurusan{" "}
-          <span className="text-white font-medium">PPLG</span> di SMK Wikrama Bogor.
+          A vocational high school student who got into the world of{" "}
+          <span className="text-white font-medium">Software Development</span> few years ago.
         </p>
-        <p className="text-muted leading-relaxed mb-8 max-w-xl
-        ">
-          Baru mengenal dunia pemrograman sejak masuk SMK. Sudah mencoba berbagai bahasa dan
-          framework — dari HTML, CSS, JavaScript, PHP, Python, hingga Flutter dan React.
-          Saat ini tertarik mendalami <span className="accent-text font-medium">Machine Learning</span>,
-          walau masih di tahap awal. Masih terus belajar dan 2 bulan lagi memulai PKL.
+
+        <p className="text-muted leading-relaxed mb-8 max-w-l">
+          A beginner with hands-on experience in different tools and languages. Currently learning mobile development with{" "}
+          <span className="accent-text font-medium">Flutter</span> while casually exploring{" "}
+          <span className="accent-text font-medium">Machine learning</span>.
         </p>
+
         <a href="#proyek" className="inline-flex items-center gap-2 accent-btn">
-          Lihat Proyek Saya <HiArrowDown />
+          View My Projects <HiArrowDown />
         </a>
       </div>
     </section>
