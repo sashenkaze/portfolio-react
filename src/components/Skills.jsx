@@ -25,8 +25,8 @@ const skills = [
   { name: "Notion", icon: <SiNotion /> },
   { name: "Laragon", icon: <SiLaragon /> },
   { name: "XAMPP", icon: <SiXampp /> },
-  { name: "TensorFlow", icon: <SiTensorflow /> },
   { name: "Pandas", icon: <SiPandas /> },
+  { name: "TensorFlow", icon: <SiTensorflow /> },
 ]
 
 export default function Skills() {
