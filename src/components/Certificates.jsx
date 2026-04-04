@@ -89,7 +89,6 @@ export default function Certificates() {
           >
             <div className="w-10 h-10 rounded-lg bg-[hsl(var(--accent)/0.15)] flex items-center justify-center mb-4">
               <span className="accent-text font-mono text-sm font-bold">
-                {/* 🔥 nomor loop */}
                 {String((i % certData.length) + 1).padStart(2, "0")}
               </span>
             </div>

@@ -21,12 +21,10 @@ export default function Hero() {
         setSpeed(100)
       }
 
-      // selesai ngetik
       if (!isDeleting && text === current) {
         setTimeout(() => setIsDeleting(true), 1500)
       }
 
-      // selesai hapus
       if (isDeleting && text === "") {
         setIsDeleting(false)
         setIndex((prev) => (prev + 1) % names.length)

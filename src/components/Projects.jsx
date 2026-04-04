@@ -66,12 +66,17 @@ export default function Projects() {
   el.scrollLeft = half
 
   const handleScroll = () => {
-    if (el.scrollLeft >= el.scrollWidth - el.clientWidth) {
-      el.scrollLeft = half
-    } else if (el.scrollLeft <= 0) {
-      el.scrollLeft = half
-    }
+  const max = el.scrollWidth - el.clientWidth
+  if (el.scrollLeft >= max - 5) {
+    requestAnimationFrame(() => {
+      el.scrollLeft -= projectData.length * (el.children[0].offsetWidth + parseInt(getComputedStyle(el).gap || 0))
+    })
+  } else if (el.scrollLeft <= 5) {
+    requestAnimationFrame(() => {
+      el.scrollLeft += projectData.length * (el.children[0].offsetWidth + parseInt(getComputedStyle(el).gap || 0))
+    })
   }
+}
 
   el.addEventListener("scroll", handleScroll)
 
@@ -79,30 +84,32 @@ export default function Projects() {
 }, [])
 
   function scroll(dir) {
-    const el = scrollRef.current
-    if (!el) return
+  const el = scrollRef.current
+  if (!el) return
 
-    const w = 300
-    const maxScroll = el.scrollWidth / 2
+  const card = el.children[0]
+  const gap = parseInt(getComputedStyle(el).gap) || 0
+  const w = card.offsetWidth + gap
+  const maxScroll = el.scrollWidth / 2
 
-    if (dir === "right") {
-      el.scrollBy({ left: w, behavior: "smooth" })
+  if (dir === "right") {
+    el.scrollBy({ left: w, behavior: "smooth" })
 
-      setTimeout(() => {
-        if (el.scrollLeft >= maxScroll) {
-          el.scrollLeft -= maxScroll
-        }
-      }, 300)
-    } else {
-      el.scrollBy({ left: -w, behavior: "smooth" })
+    setTimeout(() => {
+      if (el.scrollLeft >= maxScroll) {
+        el.scrollLeft = el.scrollLeft - maxScroll
+      }
+    }, 300)
+  } else {
+    el.scrollBy({ left: -w, behavior: "smooth" })
 
-      setTimeout(() => {
-        if (el.scrollLeft <= 0) {
-          el.scrollLeft += maxScroll
-        }
-      }, 300)
-    }
+    setTimeout(() => {
+      if (el.scrollLeft <= 0) {
+        el.scrollLeft = el.scrollLeft + maxScroll
+      }
+    }, 300)
   }
+}
 
   return (
     <section id="proyek" className="section-container">
