@@ -1,4 +1,4 @@
-import { SiHtml5, SiJavascript, SiPhp, SiPython, SiDart, SiFlutter, SiLaravel, SiReact, SiFlask, SiCss, SiMysql, SiTailwindcss, SiBootstrap, SiDjango, SiFigma, SiGit, SiGithub, SiNodedotjs, SiMongodb, SiDiscorddotjs, SiChatbot, SiPostman, SiNotion, SiAndroidstudio, SiLaragon, SiXampp, SiBrave, SiVscodium, SiWarp, SiCloudflare, SiGnubash, SiTensorflow, SiPandas, SiPostgresql } from "react-icons/si"
+import { SiHtml5, SiJavascript, SiPhp, SiPython, SiDart, SiFlutter, SiLaravel, SiReact, SiFlask, SiCss, SiMysql, SiTailwindcss, SiBootstrap, SiDjango, SiFigma, SiGit, SiGithub, SiNodedotjs, SiMongodb, SiDiscorddotjs, SiChatbot, SiPostman, SiNotion, SiAndroidstudio, SiLaragon, SiXampp, SiBrave, SiVscodium, SiWarp, SiCloudflare, SiGnubash, SiTensorflow, SiPandas, SiPostgresql, SiExpress, SiTypescript } from "react-icons/si"
 import { FaMagnifyingGlassChart } from "react-icons/fa6";
 
 const skills = [
@@ -7,11 +7,13 @@ const skills = [
   { name: "JavaScript", icon: <SiJavascript /> },
   { name: "PHP", icon: <SiPhp /> },
   { name: "Python", icon: <SiPython /> },
+  { name: "Flask", icon: <SiFlask /> },
   { name: "Dart", icon: <SiDart /> },
   { name: "Flutter", icon: <SiFlutter /> },
   { name: "Laravel", icon: <SiLaravel /> },
   { name: "React", icon: <SiReact /> },
-  { name: "Flask", icon: <SiFlask /> },
+  { name: "Express.js", icon: <SiExpress />},
+  { name: "TypeScript", icon: <SiTypescript /> },
   { name: "Node.js", icon: <SiNodedotjs /> },
   { name: "Tailwindcss", icon: <SiTailwindcss /> },
   { name: "Bootstrap", icon: <SiBootstrap /> },
@@ -25,8 +27,8 @@ const skills = [
   { name: "Notion", icon: <SiNotion /> },
   { name: "Laragon", icon: <SiLaragon /> },
   { name: "XAMPP", icon: <SiXampp /> },
-  { name: "Pandas", icon: <SiPandas /> },
-  { name: "TensorFlow", icon: <SiTensorflow /> },
+  // { name: "Pandas", icon: <SiPandas /> },
+  // { name: "TensorFlow", icon: <SiTensorflow /> },
 ]
 
 export default function Skills() {
@@ -49,7 +51,7 @@ export default function Skills() {
           <h3 className="text-white font-semibold">Currently Exploring</h3>
         </div>
         <p className="text-muted text-sm leading-relaxed">
-          Focused on learning <span className="accent-text font-medium">Flutter</span> for mobile development while exploring <span className="accent-text font-medium">Machine Learning</span>—currently in the early phase.
+          Focused on learning <span className="accent-text font-medium">Flutter</span> for mobile development and backend development with<span className="accent-text font-medium"> Express.js</span>
         </p>
       </div>
     </section>

@@ -52,8 +52,8 @@ export default function Hero() {
 
         <p className="text-muted leading-relaxed mb-8 max-w-l">
           A beginner with hands-on experience in different tools and languages. Currently learning mobile development with{" "}
-          <span className="accent-text font-medium">Flutter</span> while casually exploring{" "}
-          <span className="accent-text font-medium">Machine learning</span>.
+          <span className="accent-text font-medium">Flutter</span> and backend development & APIs with{" "}
+          <span className="accent-text font-medium">Express.js</span>.
         </p>
 
         <a href="#proyek" className="inline-flex items-center gap-2 accent-btn">
